@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vh;
+            height: 100vh;
+            background: #344954;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            border-radius: 50px;
+            animation: jump 2s infinite alternate-reverse;
+        }
+        section{
+            width: 200px;
+            height: 40px;
+            background: rgba(0,0,0.3);
+            border-radius: 50%;
+            position: absolute;
+            transform: translateY(50px);
+            z-index: -10;
+            filter: blur(5px);
+            animation: shadow 2s infinite alternate-reverse;
+        }
+        @keyframes jump{
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-150px);
+            }
+            100%{
+                transform: translateY((0));
+            }
+        }
+        @keyframes shadow{
+            0%{
+                width: 200px;
+                height: 40px;
+                filter: blur(5px);
+                background: rgba(0,0,0.3);
+            }
+            50%{
+                width: 100px;
+                height: 10px;
+                filter: blur(35px);
+                background: rgba(0,0,0,.1);
+            }
+            100%{
+                width: 200px;
+                height: 40px;
+                filter: blur(5px);
+                background: rgba(0,0,0.3);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <section></section>
+</body>
+</html>
