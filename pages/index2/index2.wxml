@@ -1,3 +1,14 @@
 <button open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">
     授权
 </button>
+<text class="t1">
+    {{age2}}
+</text>
+<view class="btn-area">
+  <navigator url="../index4/index4?title='页面4'" open-type="navigate">
+    <view>跳转到页面4</view>
+  </navigator>
+  <navigator url="../index3/index3?title='页面3'" open-type="redirect">
+    <view>跳转到页面3</view>
+  </navigator>
+</view>

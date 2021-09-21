@@ -17,60 +17,12 @@ Page({
     console.log('加载中....');
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
   async clickMe(){
     try {
       // 1.判断缓存中有没有token
       const token = wx.getStorageSync('token');
       // 2.判断
-      if(!token){
+      if(!token){ 
         wx.navigateTo({
           url: '../index2/index2',
         });
@@ -88,5 +40,13 @@ Page({
       await showToast({title:"支付失败"})
       console.log(error);
     }
+  },
+  
+  click2(e){
+    let age = e.currentTarget.dataset.age;
+    wx.navigateTo({
+      url: '../index2/index2?age='+age,
+    });
   }
 })
+

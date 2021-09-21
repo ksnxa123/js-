@@ -1,0 +1,20 @@
+<block wx:for="{{blog}}" wx:key='index'>
+<view class="blog" bind:tap='goComment' data-content="{{item}}">
+  <view class="blog-title">
+    <image class="blog-portrait" src="{{item.avatarUrl}}"></image>
+    <view class="blog-box">
+      <view class="blog-nickName">{{item.nickName}}</view>
+      <view class="blog-time">{{ item._createTime}}</view>
+    </view>
+  </view>
+  <view class="blog-content">
+    <text>{{item.content}}</text>
+  </view>
+  <view class="blog-img">
+    <block wx:for="{{item.img}}" wx:key="_id" wx:for-item="item2" wx:if="{{index<9}}">
+      <image class="img" src="{{item2}}" mode="aspectFill" catch:tap="onPreviewImage" data-imgsrc="{{item2}}" data-imgs="{{item.img}}"></image>
+    </block>
+    <view class="imgnum" wx:if='{{item.img.length>9}}'>+{{item.img.length-9}}</view>
+  </view>
+</view>
+</block>

@@ -2,3 +2,10 @@
 button{
     background-color: red;
 }
+.xa1{
+    width: 100rpx;
+    height: 50rpx;
+    margin: 0 auto;
+    border: 1px solid black;
+    margin-top: 10rpx;
+}

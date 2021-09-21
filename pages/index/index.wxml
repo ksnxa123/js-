@@ -1,1 +1,4 @@
-<button bindtap='clickMe'>支付</button>
+<button bindtap='clickMe'>
+    支付
+</button>
+<view bindtap='click2' class="xa1" data-age='{{age}}'>传参</view>

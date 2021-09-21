@@ -1,6 +1,21 @@
 import {login} from '../../utils/asyncWx';
 import {request} from '../../utils/request';
 Page({
+    data:{
+        age2:'',
+        nbFrontColor: '#000000',
+        nbBackgroundColor: '#ffffff',
+    },
+    onLoad(e){
+        console.log(e);
+        this.setData({
+            age2:e.age,
+            nbTitle: '新标题',
+            nbLoading: true,
+            nbFrontColor: '#ffffff',
+            nbBackgroundColor: '#000000',
+        })
+    },
     async handleGetUserInfo(e) {
         try {
             // 1.获取用户信息
@@ -19,5 +34,5 @@ Page({
         } catch (error) {
             console.log(error);
         }
-    }
+    },
 })

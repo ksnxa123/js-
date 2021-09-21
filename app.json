@@ -1,7 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/index2/index2"
+    "pages/index2/index2",
+    "pages/index3/index3",
+    "pages/index4/index4",
+    "pages/index5/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -9,6 +12,23 @@
     "navigationBarTitleText": "练习",
     "navigationBarTextStyle": "black"
   },
-  "style": "v2",
+  "tabBar": {
+    "color": "#474747",
+    "selectedColor": "#d43c43",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "页面1",
+        "iconPath": "images/music.png",
+        "selectedIconPath": "images/music-actived.png"
+      },
+      {
+        "pagePath": "pages/index2/index2",
+        "text": "页面2",
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profile-actived.png"
+      }
+    ]
+  },
   "sitemapLocation": "sitemap.json"
 }
